@@ -1741,9 +1741,52 @@ textarea:focus-visible {
     overflow-wrap: normal;
   }
 
+  .event-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    text-align: center;
+    padding-block: 2rem;
+  }
+
+  .event-row:hover {
+    transform: none;
+  }
+
+  .event-day {
+    width: 100%;
+    text-align: center;
+  }
+
+  .event-title {
+    width: min(100%, 12ch);
+    margin-inline: auto;
+    text-align: center;
+    font-size: clamp(2.2rem, 10vw, 3.3rem);
+    line-height: 0.98;
+  }
+
+  .event-time {
+    width: 100%;
+    margin-top: 0.35rem;
+    text-align: center;
+    white-space: normal;
+  }
+
   .whats-on-details {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    text-align: center;
+  }
+
+  .special-item {
+    text-align: center;
+  }
+
+  .whats-on-notes,
+  .whats-on-age-note {
+    text-align: center;
   }
 
   .social-intro {
