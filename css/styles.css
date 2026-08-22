@@ -203,6 +203,7 @@ textarea {
 
 .hero {
   position: relative;
+  box-sizing: border-box;
   min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
@@ -327,6 +328,7 @@ textarea {
   position: relative;
   z-index: 10;
   display: flex;
+  box-sizing: border-box;
   min-height: 100vh;
   min-height: 100svh;
   justify-content: center;
@@ -339,6 +341,51 @@ textarea {
   .hero,
   .hero-content {
     min-height: 100dvh;
+  }
+}
+
+@media (min-width: 761px) {
+  :root {
+    --hero-image-position: 59% 45%;
+  }
+
+  .hero {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 650px;
+    max-height: 100dvh;
+  }
+
+  .hero-content {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 650px;
+    max-height: 100dvh;
+  }
+
+  .hero-image--main {
+    -webkit-mask-image: radial-gradient(
+      ellipse 23% 31% at 59% 42%,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 0.9) 60%,
+      rgba(0, 0, 0, 0.5) 78%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 23% 31% at 59% 42%,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 40%,
+      rgba(0, 0, 0, 0.9) 60%,
+      rgba(0, 0, 0, 0.5) 78%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+@media (min-width: 1700px) {
+  :root {
+    --hero-image-position: 58% 45%;
   }
 }
 
