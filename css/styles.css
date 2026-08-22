@@ -389,7 +389,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: clamp(1.25rem, 2.5vw, 2rem);
+  gap: clamp(1.5rem, 2.5vw, 2rem);
   margin-top: clamp(2rem, 3.5vh, 2.75rem);
   opacity: 0;
   animation: heroReveal 860ms ease 220ms both;
@@ -1514,6 +1514,10 @@ textarea:focus-visible {
     margin-top: 0.85rem;
     padding: 0;
     text-align: center;
+  }
+
+  .hero-actions {
+    gap: 1rem;
   }
 
   .site-header {
