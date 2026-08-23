@@ -147,10 +147,7 @@ textarea {
 .footer-grid > *,
 .press-links > *,
 .about-grid > *,
-.reservation-form-grid > *,
-.social-intro > *,
-.form-field,
-.form-field > * {
+.social-intro > * {
   min-width: 0;
 }
 
@@ -1164,7 +1161,7 @@ textarea {
   align-items: start;
 }
 
-.reservation-heading-group .section-eyebrow {
+.inquiries-heading-group .section-eyebrow {
   margin-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
@@ -1177,30 +1174,13 @@ textarea {
   color: var(--canary-navy);
 }
 
-.reservation-mark {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: clamp(2rem, 3vw, 2.75rem);
-}
-
-.reservation-mark img {
-  display: block;
-  width: clamp(150px, 16vw, 230px);
-  height: auto;
-}
-
-.reservation-content {
-  width: min(100%, 500px);
-  justify-self: start;
-}
-
-.reservation-copy {
+.inquiries-details {
   max-width: 430px;
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
-.reservation-copy p {
+.inquiries-details p {
   margin: 0;
   font-family: var(--font-serif);
   font-size: clamp(1.1rem, 1.35vw, 1.35rem);
@@ -1209,151 +1189,75 @@ textarea {
   color: var(--canary-navy);
 }
 
-.reservation-availability span {
-  display: block;
+.inquiries-details p + p {
+  margin-top: 0.3rem;
 }
 
-.reservation-copy p + p {
-  margin-top: 0.85rem;
+.inquiries-content {
+  width: min(100%, 500px);
+  justify-self: start;
+  align-self: start;
 }
 
-.reserve-form {
-  margin-top: 0;
-  padding: 0;
-  border: 0;
+.inquiries-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: start;
 }
 
-.reservation-form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 1.25rem;
-  row-gap: 0.8rem;
+.inquiries-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
 }
 
-.form-field {
-  display: block;
+.inquiries-copy p {
+  margin: 0;
+  color: var(--canary-navy);
 }
 
-.form-field--full {
-  grid-column: 1 / -1;
-}
-
-.form-field label {
-  display: block;
-  margin-bottom: 0.18rem;
-  font-size: 0.64rem;
-  line-height: 1;
+.inquiries-kicker {
+  font-size: 0.72rem;
+  line-height: 1.1;
   font-weight: 600;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--canary-navy);
 }
 
-.reservation-notice {
-  margin: 0.75rem 0 0;
-  color: var(--canary-navy);
-  font-size: 0.88rem;
-  font-weight: 600;
-  line-height: 1.4;
+.inquiries-contact {
+  margin-top: clamp(1.75rem, 2.5vw, 2.5rem);
 }
 
-.reservation-form input,
-.reservation-form select,
-.reservation-form textarea {
-  width: 100%;
-  padding: 0.45rem 0 0.5rem;
-  background: transparent;
-  color: var(--canary-navy);
-  border: 0;
-  border-bottom: 1px solid rgba(22, 23, 43, 0.32);
-  border-radius: 0;
+.inquiries-contact-label {
+  margin: 0;
 }
 
-.reservation-form textarea {
-  min-height: 52px;
+.inquiries-email {
+  display: inline-block;
+  margin-top: 0.55rem;
+  color: var(--canary-yellow);
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2vw, 2.2rem);
+  line-height: 1.1;
+  text-decoration: none;
+  overflow-wrap: anywhere;
 }
 
-.form-field textarea {
-  resize: vertical;
+.inquiries-email:hover,
+.inquiries-email:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
-.reservation-form input:focus,
-.reservation-form select:focus,
-.reservation-form textarea:focus {
-  outline: 0;
-  border-bottom-color: var(--canary-yellow);
+.inquiries-bird {
+  margin-top: clamp(1.5rem, 2.5vw, 2.25rem);
 }
 
-.form-status {
-  min-height: 1.5rem;
-  margin: 1rem 0 0;
-  color: var(--canary-navy);
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.form-status.is-success,
-.form-status.is-error {
+.inquiries-mark img {
   display: block;
-  position: relative;
-  margin-top: 1.5rem;
-  padding: 1rem 1.15rem;
-  padding-left: 2.5rem;
-  border-radius: 6px;
-  box-sizing: border-box;
-  font-weight: 600;
-  line-height: 1.45;
-  text-align: left;
-}
-
-.form-status.is-success {
-  background: var(--canary-yellow);
-  color: var(--canary-navy);
-}
-
-.form-status.is-success::before {
-  content: "\2713";
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.form-status.is-error {
-  border: 1px solid rgba(139, 41, 41, 0.24);
-  background: rgba(255, 255, 255, 0.88);
-  color: #8b2929;
-}
-
-.form-status-lead,
-.form-status-detail {
-  display: block;
-}
-
-.form-status-detail {
-  font-weight: 500;
-}
-
-.reservation-submit {
-  margin-top: 1rem;
-  min-height: auto;
-  padding: 0.75rem 1.25rem;
-  background: var(--canary-navy);
-  color: var(--canary-cream);
-  border-color: var(--canary-navy);
-}
-
-.reservation-submit:hover,
-.reservation-submit:focus-visible {
-  background: var(--canary-yellow);
-  border-color: var(--canary-yellow);
-  color: var(--canary-navy);
-}
-
-.reservation-section .form-note {
-  color: rgba(37, 37, 54, 0.72);
+  width: clamp(100px, 10vw, 150px);
+  height: auto;
 }
 
 .press-section {
@@ -1618,7 +1522,6 @@ textarea:focus-visible {
   }
 
   .editorial-split,
-  .reservation-grid,
   .footer-grid {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -1723,7 +1626,7 @@ textarea:focus-visible {
     font-size: clamp(2.8rem, 5vw, 4rem);
   }
 
-  .reservation-copy p {
+  .inquiries-details p {
     font-size: clamp(1.25rem, 2vw, 1.45rem);
   }
 }
@@ -1972,7 +1875,7 @@ textarea:focus-visible {
     text-shadow: none;
   }
 
-  .site-nav a[href="#reserve"] {
+  .site-nav a[href="#inquiries"] {
     color: var(--canary-yellow);
   }
 
@@ -2000,17 +1903,8 @@ textarea:focus-visible {
   }
 
   .reservation-grid,
-  .reservation-form-grid,
   .footer-grid {
     grid-template-columns: 1fr;
-  }
-
-  .reservation-form-grid {
-    row-gap: 1rem;
-  }
-
-  .reservation-mark img {
-    width: clamp(130px, 42vw, 190px);
   }
 
   .about-heading-group .section-eyebrow {
@@ -2218,10 +2112,6 @@ textarea:focus-visible {
     right: auto;
   }
 
-  .reservation-grid {
-    gap: 2.5rem;
-  }
-
   .footer-grid {
     gap: 2.5rem;
   }
@@ -2241,18 +2131,6 @@ textarea:focus-visible {
     text-align: center;
   }
 
-  .form-status.is-success,
-  .form-status.is-error {
-    width: 100%;
-    margin-top: 1.25rem;
-    padding: 1rem;
-    padding-left: 2.35rem;
-  }
-
-  .form-status.is-success::before {
-    left: 0.95rem;
-  }
-
   .editorial-heading,
   .section-display,
   .reservation-heading,
@@ -2262,6 +2140,22 @@ textarea:focus-visible {
 
   .site-footer .section-shell {
     padding: 0;
+  }
+
+  .inquiries-email {
+    font-size: clamp(1.25rem, 6vw, 2rem);
+  }
+
+  .inquiries-contact {
+    margin-top: 1.5rem;
+  }
+
+  .inquiries-bird {
+    margin-top: 1.25rem;
+  }
+
+  .inquiries-mark img {
+    width: clamp(100px, 28vw, 130px);
   }
 }
 

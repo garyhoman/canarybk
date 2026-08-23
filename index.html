@@ -72,7 +72,7 @@
                 </div>
               <div class="nav-group nav-right">
                 <a href="#location">Location</a>
-                <a href="#reserve">Reserve</a>
+                <a href="#inquiries">Inquiries</a>
                 <a href="#social">Socials</a>
                 <a href="#media">Media</a>
               </div>
@@ -98,7 +98,7 @@
               <cite class="hero-quote-author">W. B. Yeats</cite>
             </blockquote>
             <div class="hero-actions">
-              <a class="button button-primary hero-reserve" href="#reserve">Reserve a Table</a>
+              <a class="button button-primary hero-reserve" href="#inquiries">Party Inquiries</a>
               <a class="hero-menu-link hero-menu" href="menu/canary-full-menu.pdf" target="_blank" rel="noopener noreferrer"
                 >View Menu &rarr;</a
               >
@@ -333,19 +333,26 @@
         </div>
       </section>
 
-      <section class="reserve reservation-section page-section page-section--large section-divider" id="reserve" aria-labelledby="reserve-title">
+      <section class="inquiries reservation-section page-section page-section--large section-divider" id="inquiries" aria-labelledby="inquiries-title">
         <div class="section-shell site-container">
           <div class="reservation-grid">
-            <div class="reservation-heading-group">
-              <p class="section-eyebrow" id="reserve-title">Reserve a Table</p>
-              <h2 class="reservation-statement">Save your seat.</h2>
-              <div class="reservation-copy">
-                <p class="reservation-availability">
-                  <span>Reservations are available Tuesday–Sunday.</span>
-                  <span>Mondays are first come, first served because of Trivia Night.</span>
-                </p>
+            <div class="inquiries-heading-group">
+              <p class="section-eyebrow" id="inquiries-title">Inquiries</p>
+              <h2 class="reservation-statement">Looking to<br />book a party?</h2>
+            </div>
+
+            <div class="inquiries-content inquiries-right">
+              <div class="inquiries-copy">
+                <div class="inquiries-details">
+                  <p>Bookings are available Tuesday - Sunday.</p>
+                  <p>Mondays are first come, first served because of Trivia night.</p>
+                </div>
+                <div class="inquiries-contact">
+                  <p class="inquiries-kicker inquiries-contact-label">PLEASE CONTACT US:</p>
+                  <a class="inquiries-email" href="mailto:red@thecanarybk.com">red@thecanarybk.com</a>
+                </div>
               </div>
-              <div class="reservation-mark">
+              <div class="inquiries-mark inquiries-bird">
                 <img
                   src="images/branding/Bird-Outline-Yellow-Circle-3.jpg"
                   alt="The Canary bird mark"
@@ -353,81 +360,6 @@
                   decoding="async"
                 />
               </div>
-            </div>
-
-            <div class="reservation-content">
-              <form
-                class="reserve-form reservation-form"
-                action="https://formspree.io/f/xbgrerza"
-                method="POST"
-              >
-                <input type="hidden" name="_subject" value="New reservation request — The Canary" />
-                <div class="reservation-form-grid">
-                  <div class="form-field">
-                    <label for="name">Name</label>
-                    <input id="name" name="Name" type="text" autocomplete="name" required />
-                  </div>
-                  <div class="form-field">
-                    <label for="email">Email</label>
-                    <input id="email" name="Email" type="email" autocomplete="email" required />
-                  </div>
-                  <div class="form-field">
-                    <label for="phone">Phone</label>
-                    <input id="phone" name="Phone" type="tel" autocomplete="tel" required />
-                  </div>
-                  <div class="form-field">
-                    <label for="reservation-date">Date</label>
-                    <input id="reservation-date" name="Reservation Date" type="date" required />
-                    <p class="reservation-notice" data-monday-notice hidden>
-                      Mondays are first come, first served for Trivia Night — no reservations are taken.
-                    </p>
-                  </div>
-                  <div class="form-field">
-                    <label for="time">Time</label>
-                    <select id="time" name="Reservation Time" required>
-                      <option value="">Select a time</option>
-                      <option value="4:00 PM">4:00 PM</option>
-                      <option value="4:30 PM">4:30 PM</option>
-                      <option value="5:00 PM">5:00 PM</option>
-                      <option value="5:30 PM">5:30 PM</option>
-                      <option value="6:00 PM">6:00 PM</option>
-                      <option value="6:30 PM">6:30 PM</option>
-                      <option value="7:00 PM">7:00 PM</option>
-                      <option value="7:30 PM">7:30 PM</option>
-                      <option value="8:00 PM">8:00 PM</option>
-                      <option value="8:30 PM">8:30 PM</option>
-                      <option value="9:00 PM">9:00 PM</option>
-                      <option value="9:30 PM">9:30 PM</option>
-                      <option value="10:00 PM">10:00 PM</option>
-                      <option value="10:30 PM">10:30 PM</option>
-                    </select>
-                  </div>
-                  <div class="form-field">
-                    <label for="guests">Number of guests</label>
-                    <select id="guests" name="Party Size" required>
-                      <option value="">Select guests</option>
-                      <option value="1">1 guest</option>
-                      <option value="2">2 guests</option>
-                      <option value="3">3 guests</option>
-                      <option value="4">4 guests</option>
-                      <option value="5">5 guests</option>
-                      <option value="6">6 guests</option>
-                      <option value="7+">7+ guests</option>
-                    </select>
-                  </div>
-                  <div class="form-field form-field--full">
-                    <label for="message">Message / special requests</label>
-                    <textarea id="message" name="Special Requests" rows="2"></textarea>
-                  </div>
-                </div>
-
-                <div class="form-actions">
-                  <button class="button reservation-submit" type="submit">Request a Table</button>
-                  <p class="form-note">Your reservation request is not confirmed until you hear back from The Canary.</p>
-                </div>
-
-                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-              </form>
             </div>
           </div>
         </div>
@@ -518,8 +450,8 @@
             <div><span>Mon-Wed</span><span>4PM-2AM</span></div>
             <div><span>Thu</span><span>4PM-4AM</span></div>
             <div><span>Fri</span><span>12PM-4AM</span></div>
-            <div><span>Sat</span><span>11AM-4AM</span></div>
-            <div><span>Sun</span><span>11AM-2AM</span></div>
+            <div><span>Sat</span><span>10AM-4AM</span></div>
+            <div><span>Sun</span><span>10AM-2AM</span></div>
           </div>
         </section>
 
@@ -527,7 +459,7 @@
           <p class="footer-heading" id="footer-links">Links</p>
           <ul class="footer-links">
             <li><a href="menu/canary-full-menu.pdf" target="_blank" rel="noopener noreferrer">Menu</a></li>
-            <li><a href="#reserve">Reserve</a></li>
+            <li><a href="#inquiries">Inquiries</a></li>
             <li>
               <a
                 class="footer-instagram-link"
