@@ -1284,6 +1284,16 @@ textarea {
   color: var(--canary-navy);
 }
 
+.press-title {
+  display: block;
+  margin-top: 0.55rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 1.45vw, 1.35rem);
+  line-height: 1.35;
+  font-weight: 400;
+  color: rgba(22, 23, 43, 0.82);
+}
+
 .press-action {
   display: block;
   margin-top: 0.7rem;
