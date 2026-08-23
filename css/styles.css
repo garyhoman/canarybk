@@ -622,7 +622,8 @@ textarea {
   align-self: center;
 }
 
-.about-copy p {
+.about-copy p,
+.inquiries-details p {
   margin: 0;
   color: var(--canary-navy);
   font-family: var(--font-serif);
@@ -656,7 +657,8 @@ textarea {
   align-self: center;
 }
 
-.fare-copy p {
+.fare-copy p,
+.social-copy p {
   margin: 0;
   color: rgba(243, 240, 233, 0.78);
   font-family: var(--font-serif);
@@ -1102,16 +1104,6 @@ textarea {
   align-self: center;
 }
 
-.social-copy p {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 1.6vw, 1.6rem);
-  line-height: 1.45;
-  font-weight: 400;
-  color: rgba(243, 240, 233, 0.78);
-  text-align: left;
-}
-
 .social-link {
   display: inline-block;
   margin-top: 1.5rem;
@@ -1178,15 +1170,6 @@ textarea {
   max-width: 430px;
   width: 100%;
   margin-top: 0;
-}
-
-.inquiries-details p {
-  margin: 0;
-  font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 1.35vw, 1.35rem);
-  line-height: 1.4;
-  font-weight: 400;
-  color: var(--canary-navy);
 }
 
 .inquiries-details p + p {
@@ -1592,7 +1575,8 @@ textarea:focus-visible {
     font-size: clamp(2.8rem, 5vw, 4rem);
   }
 
-  .about-copy p {
+  .about-copy p,
+  .inquiries-details p {
     font-size: clamp(1.25rem, 2vw, 1.45rem);
   }
 
@@ -1613,6 +1597,7 @@ textarea:focus-visible {
     font-size: clamp(2.8rem, 5vw, 4rem);
   }
 
+  .fare-copy p,
   .social-copy p {
     font-size: clamp(1.25rem, 2vw, 1.45rem);
   }
@@ -1626,9 +1611,6 @@ textarea:focus-visible {
     font-size: clamp(2.8rem, 5vw, 4rem);
   }
 
-  .inquiries-details p {
-    font-size: clamp(1.25rem, 2vw, 1.45rem);
-  }
 }
 
 @media (min-width: 1700px) {
