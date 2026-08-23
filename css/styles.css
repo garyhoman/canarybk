@@ -1783,14 +1783,17 @@ textarea:focus-visible {
     position: absolute;
     top: 1.15rem;
     right: 1.15rem;
+    left: auto;
     z-index: 20;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
+    margin: 0;
     padding: 0;
     gap: 5px;
+    transform: none;
   }
 
   .nav-toggle span {
@@ -1861,14 +1864,20 @@ textarea:focus-visible {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: min(78vw, 320px);
+    max-width: calc(100% - 2.5rem);
+    margin-left: auto;
+    margin-right: auto;
     gap: 0.7rem;
     margin-top: clamp(4rem, 11vh, 7rem);
+    text-align: left;
   }
 
   .nav-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
     gap: 0.7rem;
   }
 
@@ -1878,12 +1887,15 @@ textarea:focus-visible {
   }
 
   .site-nav a {
+    display: block;
+    width: 100%;
     font-family: "Cormorant Garamond", Garamond, Georgia, serif;
     font-size: clamp(2.3rem, 9vw, 3.8rem);
     line-height: 1;
     font-weight: 600;
     letter-spacing: 0;
     text-transform: none;
+    text-align: left;
     color: var(--canary-cream);
     text-shadow: none;
   }
@@ -1995,17 +2007,20 @@ textarea:focus-visible {
     display: block;
     width: 100%;
     margin-top: 0.75rem;
-    text-align: right;
+    text-align: center;
   }
 
   .fare-swipe-hint {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
     color: var(--canary-yellow);
     font-size: 0.62rem;
     font-weight: 600;
     letter-spacing: 0.12em;
     line-height: 1;
-    text-align: right;
+    text-align: center;
     text-transform: uppercase;
   }
 
