@@ -66,7 +66,6 @@
               </div>
               <div class="mobile-nav-links">
                 <div class="nav-group nav-left">
-                  <a href="menu/canary-full-menu.pdf" target="_blank" rel="noopener noreferrer">Menu</a>
                   <a href="#about">About</a>
                   <a href="#fare">Fare</a>
                   <a href="#whats-on">What's On</a>
@@ -140,6 +139,14 @@
                     decoding="async"
                   />
                 </figure>
+                <figure class="about-mosaic-item about-mosaic-item--trad">
+                  <img
+                    src="images/irish-trad-session.jpeg"
+                    alt="An Irish trad session filling The Canary with live music"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
                 <figure class="about-mosaic-item about-mosaic-item--bar">
                   <img
                     src="images/canary-bar.jpeg"
@@ -171,6 +178,10 @@
                 >Explore the Menu</a
               >
             </div>
+          </div>
+
+          <div class="fare-gallery-header" aria-hidden="true">
+            <span class="fare-swipe-hint">Swipe &rarr;</span>
           </div>
 
           <div class="fare-gallery" aria-label="Food and libations at The Canary">
@@ -339,8 +350,11 @@
             </div>
 
             <div class="reservation-content">
-              <!-- Replace with Formspree endpoint connected to red@thecanarybk.com -->
-              <form class="reserve-form reservation-form" action="#" method="post" novalidate>
+              <form
+                class="reserve-form reservation-form"
+                action="https://formspree.io/f/xbgrerza"
+                method="POST"
+              >
                 <input type="hidden" name="_subject" value="New reservation request — The Canary" />
                 <div class="reservation-form-grid">
                   <div class="form-field">
@@ -386,13 +400,13 @@
                     <label for="guests">Number of guests</label>
                     <select id="guests" name="Party Size" required>
                       <option value="">Select guests</option>
-                      <option>1 guest</option>
-                      <option>2 guests</option>
-                      <option>3 guests</option>
-                      <option>4 guests</option>
-                      <option>5 guests</option>
-                      <option>6 guests</option>
-                      <option>7+ guests</option>
+                      <option value="1">1 guest</option>
+                      <option value="2">2 guests</option>
+                      <option value="3">3 guests</option>
+                      <option value="4">4 guests</option>
+                      <option value="5">5 guests</option>
+                      <option value="6">6 guests</option>
+                      <option value="7+">7+ guests</option>
                     </select>
                   </div>
                   <div class="form-field form-field--full">

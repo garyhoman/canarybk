@@ -63,11 +63,13 @@ if (reservationDate) {
 }
 
 if (reserveForm && formStatus) {
-  reserveForm.addEventListener("submit", (event) => {
+  reserveForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    formStatus.textContent = "";
+
     const mondaySelected = updateMondayState();
 
     if (mondaySelected) {
-      event.preventDefault();
       reservationDate?.reportValidity();
       formStatus.textContent =
         "Mondays are first come, first served for Trivia Night — no reservations are taken.";
@@ -75,23 +77,31 @@ if (reserveForm && formStatus) {
     }
 
     if (!reserveForm.checkValidity()) {
-      event.preventDefault();
       reserveForm.reportValidity();
-      formStatus.textContent = "";
       return;
     }
 
-    const action = reserveForm.getAttribute("action")?.trim() ?? "";
-    const isPlaceholderAction = action === "" || action === "#";
+    try {
+      const response = await fetch(reserveForm.action, {
+        method: reserveForm.method || "POST",
+        body: new FormData(reserveForm),
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-    if (isPlaceholderAction) {
-      event.preventDefault();
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status ${response.status}`);
+      }
+
       formStatus.textContent =
-        "Reservation requests are not yet connected. Replace the form action with a Formspree endpoint for red@thecanarybk.com.";
-      return;
+        "Thanks — your reservation request has been sent. Your table is not confirmed until you hear back from The Canary.";
+      reserveForm.reset();
+      mondayNotice.hidden = true;
+      reservationDate?.setCustomValidity("");
+    } catch {
+      formStatus.textContent =
+        "Something went wrong while sending your request. Please try again.";
     }
-
-    formStatus.textContent =
-      "Thanks — your reservation request has been sent. Your table is not confirmed until you hear back from The Canary.";
   });
 }
