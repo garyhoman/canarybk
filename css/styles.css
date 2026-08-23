@@ -1484,10 +1484,12 @@ textarea {
 }
 
 .footer-instagram-link {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   justify-content: center;
   margin: 0;
+  margin-inline: auto;
   padding: 0.2rem;
   line-height: 1;
   color: inherit;
