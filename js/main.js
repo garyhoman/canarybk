@@ -5,6 +5,26 @@ const reserveForm = document.querySelector(".reserve-form");
 const formStatus = document.querySelector("#form-status");
 const reservationDate = document.querySelector("#reservation-date");
 const mondayNotice = document.querySelector("[data-monday-notice]");
+const successMessageLead = "Thanks — your reservation request has been sent.";
+const successMessageDetail =
+  "Your table is not confirmed until you hear back from The Canary.";
+
+function setFormStatus(content = "", state = "") {
+  formStatus.classList.remove("is-success", "is-error");
+
+  if (!content) {
+    formStatus.textContent = "";
+    return;
+  }
+
+  if (state === "success") {
+    formStatus.classList.add("is-success");
+  } else if (state === "error") {
+    formStatus.classList.add("is-error");
+  }
+
+  formStatus.innerHTML = content;
+}
 
 function isMonday(value) {
   if (!value) return false;
@@ -65,14 +85,16 @@ if (reservationDate) {
 if (reserveForm && formStatus) {
   reserveForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    formStatus.textContent = "";
+    setFormStatus();
 
     const mondaySelected = updateMondayState();
 
     if (mondaySelected) {
       reservationDate?.reportValidity();
-      formStatus.textContent =
-        "Mondays are first come, first served for Trivia Night — no reservations are taken.";
+      setFormStatus(
+        "Mondays are first come, first served for Trivia Night — no reservations are taken.",
+        "error",
+      );
       return;
     }
 
@@ -94,14 +116,18 @@ if (reserveForm && formStatus) {
         throw new Error(`Form submission failed with status ${response.status}`);
       }
 
-      formStatus.textContent =
-        "Thanks — your reservation request has been sent. Your table is not confirmed until you hear back from The Canary.";
+      setFormStatus(
+        `<span class="form-status-lead">${successMessageLead}</span><span class="form-status-detail">${successMessageDetail}</span>`,
+        "success",
+      );
       reserveForm.reset();
       mondayNotice.hidden = true;
       reservationDate?.setCustomValidity("");
     } catch {
-      formStatus.textContent =
-        "Something went wrong while sending your request. Please try again.";
+      setFormStatus(
+        "Something went wrong while sending your request. Please try again.",
+        "error",
+      );
     }
   });
 }
