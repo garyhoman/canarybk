@@ -1651,6 +1651,20 @@ textarea:focus-visible {
     --hero-image-position: 60% center;
   }
 
+  html,
+  body {
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
   .hero-image--main {
     -webkit-mask-image: radial-gradient(
       ellipse 26% 26% at 61% 42%,
