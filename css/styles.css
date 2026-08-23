@@ -1195,6 +1195,10 @@ textarea {
   color: var(--canary-navy);
 }
 
+.reservation-availability span {
+  display: block;
+}
+
 .reservation-copy p + p {
   margin-top: 0.85rem;
 }
