@@ -976,6 +976,14 @@ textarea {
   line-height: 1.45;
 }
 
+.whats-on-notes .special-label {
+  color: var(--canary-yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
+
 .whats-on-notes strong {
   color: var(--canary-yellow);
   font-weight: 600;
