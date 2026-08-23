@@ -941,6 +941,7 @@ textarea {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.8rem;
+  line-height: 1.45;
 }
 
 .happy-hour-schedule {
@@ -971,9 +972,6 @@ textarea {
 
 .whats-on-notes p {
   margin: 0;
-  color: rgba(243, 240, 233, 0.78);
-  font-size: 0.9rem;
-  line-height: 1.45;
 }
 
 .whats-on-notes .special-label {
@@ -984,6 +982,13 @@ textarea {
   line-height: 1.45;
 }
 
+.whats-on-notes p:not(.special-label) {
+  color: var(--cream-muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  letter-spacing: 0.12em;
+}
+
 .whats-on-notes strong {
   color: var(--canary-yellow);
   font-weight: 600;
@@ -991,7 +996,7 @@ textarea {
 
 .whats-on-age-note {
   margin-top: 0.6rem;
-  color: rgba(243, 240, 233, 0.62);
+  color: rgba(243, 240, 233, 0.72);
   font-size: 0.78rem;
   line-height: 1.4;
 }
