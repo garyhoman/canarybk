@@ -1738,6 +1738,7 @@ textarea:focus-visible {
 
 @media (max-width: 760px) {
   :root {
+    --mobile-brand-top: 1.5rem;
     --hero-image-position: 60% center;
   }
 
@@ -1774,12 +1775,13 @@ textarea:focus-visible {
   }
 
   .hero-brand {
-    top: 1.5rem;
+    top: var(--mobile-brand-top);
     width: calc(100% - 7rem);
     max-width: none;
   }
 
-  .hero-logo {
+  .hero-logo,
+  .mobile-nav-logo {
     width: 48px;
     max-width: 48px;
   }
@@ -1834,10 +1836,10 @@ textarea:focus-visible {
 
   .nav-toggle {
     position: absolute;
-    top: 1.15rem;
-    right: 1.15rem;
+    top: 1.1rem;
+    right: 1.1rem;
     left: auto;
-    z-index: 20;
+    z-index: 40;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1852,6 +1854,7 @@ textarea:focus-visible {
   .nav-toggle span {
     width: 22px;
     height: 1px;
+    transform-origin: center;
     transition:
       transform 220ms ease,
       opacity 220ms ease;
@@ -1872,7 +1875,7 @@ textarea:focus-visible {
   .site-nav {
     position: fixed;
     inset: 0;
-    z-index: 19;
+    z-index: 30;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1892,17 +1895,20 @@ textarea:focus-visible {
       visibility 220ms ease;
   }
 
-  .mobile-nav-header {
+  .mobile-nav-logo-wrap {
+    position: absolute;
+    top: var(--mobile-brand-top);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 32;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    min-height: 44px;
-    padding-right: 3.15rem;
+    justify-content: center;
+    width: 48px;
   }
 
   .mobile-nav-logo {
     display: block;
-    width: 52px;
     height: auto;
   }
 
@@ -1916,20 +1922,19 @@ textarea:focus-visible {
   .mobile-nav-links {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: min(78vw, 320px);
+    align-items: center;
+    width: min(76vw, 300px);
     max-width: calc(100% - 2.5rem);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 7rem auto 0;
+    padding: 0;
     gap: 0.7rem;
-    margin-top: clamp(4rem, 11vh, 7rem);
-    text-align: left;
+    text-align: center;
   }
 
   .nav-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     gap: 0.7rem;
   }
@@ -1948,7 +1953,7 @@ textarea:focus-visible {
     font-weight: 600;
     letter-spacing: 0;
     text-transform: none;
-    text-align: left;
+    text-align: center;
     color: var(--canary-cream);
     text-shadow: none;
   }
@@ -1960,6 +1965,7 @@ textarea:focus-visible {
   .mobile-nav-meta {
     display: block;
     margin-top: auto;
+    text-align: center;
     font-size: 0.62rem;
     line-height: 1.5;
     letter-spacing: 0.14em;
