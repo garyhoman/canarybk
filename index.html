@@ -8,7 +8,7 @@
       name="description"
       content="The Canary is a neighborhood pub in Crown Heights, Brooklyn serving good food, proper pints, live music and late nights."
     />
-    <meta name="theme-color" content="#16172b" />
+    <meta name="theme-color" content="#000000" />
     <meta
       property="og:title"
       content="The Canary | Crown Heights Neighborhood Pub"
@@ -33,10 +33,10 @@
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-media">
-          <img class="hero-image hero-image--softened" src="images/guinness.jpg" alt="" aria-hidden="true" />
+          <img class="hero-image hero-image--softened" src="images/pint-of-guinness.jpg" alt="" aria-hidden="true" />
           <img
             class="hero-image hero-image--main"
-            src="images/guinness.jpg"
+            src="images/pint-of-guinness.jpg"
             alt="A pint of Guinness on the bar at The Canary."
             width="1179"
             height="663"
@@ -66,8 +66,9 @@
               </div>
               <div class="mobile-nav-links">
                 <div class="nav-group nav-left">
-                  <a href="menu/MENU_8_12_fixed.pdf" target="_blank" rel="noopener noreferrer">Menu</a>
+                  <a href="menu/canary-full-menu.pdf" target="_blank" rel="noopener noreferrer">Menu</a>
                   <a href="#about">About</a>
+                  <a href="#fare">Fare</a>
                   <a href="#whats-on">What's On</a>
                 </div>
               <div class="nav-group nav-right">
@@ -99,7 +100,7 @@
             </blockquote>
             <div class="hero-actions">
               <a class="button button-primary hero-reserve" href="#reserve">Reserve a Table</a>
-              <a class="hero-menu-link hero-menu" href="menu/MENU_8_12_fixed.pdf" target="_blank" rel="noopener noreferrer"
+              <a class="hero-menu-link hero-menu" href="menu/canary-full-menu.pdf" target="_blank" rel="noopener noreferrer"
                 >View Menu &rarr;</a
               >
             </div>
@@ -118,7 +119,7 @@
                 The Canary is a Crown Heights neighborhood pub made for good food, proper pints and even better
                 company.
               </p>
-              <p>Come by for dinner, weekend brunch, a match, live music or a late one at the bar.</p>
+              <p>Come by for dinner, weekend brunch, a game, live music or a late one at the bar.</p>
               </div>
             </div>
             <div class="about-visual">
@@ -149,6 +150,70 @@
                 </figure>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fare-section page-section page-section--large section-divider" id="fare" aria-labelledby="fare-title">
+        <div class="section-shell site-container">
+          <div class="fare-intro editorial-split">
+            <div class="fare-heading-group">
+              <p class="section-eyebrow" id="fare-title">Food and Libations</p>
+              <h2 class="fare-statement">Something for the table.</h2>
+            </div>
+            <div class="fare-copy">
+              <p>Pints poured proper. Strong cocktails and food worth sticking around for.</p>
+              <a
+                class="fare-menu-link"
+                href="menu/canary-full-menu.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Explore the Menu</a
+              >
+            </div>
+          </div>
+
+          <div class="fare-gallery" aria-label="Food and libations at The Canary">
+            <figure class="fare-gallery-item fare-gallery-item--sandwich">
+              <img
+                src="images/food-and-drinks/aerial-shot-of-sandwich.jpeg"
+                alt="Sandwiches, fries, and cocktails on the table at The Canary"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="fare-gallery-item fare-gallery-item--cocktails">
+              <img
+                src="images/food-and-drinks/canary-cocktail-clink.jpeg"
+                alt="Cocktails clinking above plates of food at The Canary"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="fare-gallery-item fare-gallery-item--regulars">
+              <img
+                src="images/food-and-drinks/canary-regulars.jpeg"
+                alt="Guests holding drinks inside The Canary"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="fare-gallery-item fare-gallery-item--sausage-rolls">
+              <img
+                src="images/food-and-drinks/delectable-sausage-rolls.jpeg"
+                alt="Sausage rolls served at The Canary"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <figure class="fare-gallery-item fare-gallery-item--full-irish">
+              <img
+                src="images/food-and-drinks/the-full-irish-canary.jpeg"
+                alt="A full Irish breakfast and a pint at The Canary"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
           </div>
         </div>
       </section>
@@ -194,15 +259,22 @@
           <div class="whats-on-details" aria-label="Weekly details">
             <div class="special-item">
               <p class="special-label">Happy Hour</p>
-              <p>Mon-Fri · 4-8PM</p>
+              <div class="happy-hour-schedule">
+                <p class="special-detail">
+                  <span class="happy-hour-schedule-line"
+                    >Monday, Tuesday, Thursday, Friday &middot; <span class="time-range">4PM&ndash;8PM</span></span
+                  >
+                </p>
+                <p class="special-detail">Wednesday &middot; 4PM&ndash;9PM</p>
+              </div>
             </div>
             <div class="special-item">
               <p class="special-label">Late Night Happy Hour</p>
-              <p>Sun-Tue · 11PM-2AM</p>
+              <p class="special-detail">Sun-Tue · 11PM-2AM</p>
             </div>
             <div class="special-item">
               <p class="special-label">Weekend Brunch</p>
-              <p>Sat &amp; Sun · 10AM-3PM</p>
+              <p class="special-detail">Sat &amp; Sun · 10AM-3PM</p>
             </div>
           </div>
 
@@ -434,7 +506,7 @@
         <section class="footer-links-block" aria-labelledby="footer-links">
           <p class="footer-heading" id="footer-links">Links</p>
           <ul class="footer-links">
-            <li><a href="menu/MENU_8_12_fixed.pdf" target="_blank" rel="noopener noreferrer">Menu</a></li>
+            <li><a href="menu/canary-full-menu.pdf" target="_blank" rel="noopener noreferrer">Menu</a></li>
             <li><a href="#reserve">Reserve</a></li>
             <li>
               <a href="https://www.instagram.com/thecanarybk/" target="_blank" rel="noopener noreferrer">Instagram</a>
