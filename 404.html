@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 | The Canary</title>
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="https://thecanarybk.com/404.html" />
+    <link rel="icon" href="images/branding/canary-logo.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .not-found {
+        min-height: 100vh;
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        background: var(--canary-cream);
+        color: var(--canary-navy);
+      }
+
+      .not-found-card {
+        text-align: center;
+      }
+
+      .not-found-code {
+        margin: 0;
+        color: var(--canary-yellow);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .not-found-title {
+        margin: 1rem 0 0;
+        font-family: var(--font-serif);
+        font-size: clamp(3rem, 9vw, 5.5rem);
+        line-height: 0.95;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+
+      .not-found-copy {
+        margin: 1rem 0 0;
+        font-family: var(--font-serif);
+        font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+        line-height: 1.4;
+        color: rgba(22, 23, 43, 0.82);
+      }
+
+      .not-found-link {
+        display: inline-block;
+        margin-top: 1.5rem;
+        color: var(--canary-yellow);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+
+      .not-found-link:hover,
+      .not-found-link:focus-visible {
+        text-decoration: underline;
+        text-underline-offset: 0.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="not-found">
+      <div class="not-found-card">
+        <p class="not-found-code">404</p>
+        <h1 class="not-found-title">Page not found.</h1>
+        <a class="not-found-link" href="/">Return to The Canary</a>
+      </div>
+    </main>
+  </body>
+</html>
