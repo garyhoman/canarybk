@@ -431,28 +431,91 @@
           <div class="reservation-grid">
             <div class="inquiries-heading-group">
               <p class="section-eyebrow">Inquiries</p>
-              <h2 class="reservation-statement" id="inquiries-heading">Looking to<br />book a party?</h2>
+              <h2 class="reservation-statement" id="inquiries-heading">Get in touch.</h2>
+              <div class="inquiries-details">
+                <p>Bookings are available Tuesday - Sunday.</p>
+                <p>Please note we only accept reservations for parties of 6 or more. Mondays are first come, first served.</p>
+                <div class="inquiries-mark inquiries-bird">
+                  <img
+                    src="images/branding/Bird-Outline-Yellow-Circle-3.jpg"
+                    alt="The Canary bird mark"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
             </div>
 
-            <div class="inquiries-content inquiries-right">
-              <div class="inquiries-copy">
-                <div class="inquiries-details">
-                  <p>Bookings are available Tuesday - Sunday.</p>
-                  <p>Please note we only accept reservations for parties of 6 or more. Mondays are first come, first served.</p>
+            <div class="inquiries-content">
+              <form
+                class="inquiry-form"
+                action="https://formspree.io/f/xbgrerza"
+                method="POST"
+              >
+                <div class="inquiry-form-grid">
+                  <div class="form-field">
+                    <label for="inquiry-first-name">First Name <span aria-hidden="true">*</span></label>
+                    <input
+                      id="inquiry-first-name"
+                      name="First Name"
+                      type="text"
+                      autocomplete="given-name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field">
+                    <label for="inquiry-last-name">Last Name <span aria-hidden="true">*</span></label>
+                    <input
+                      id="inquiry-last-name"
+                      name="Last Name"
+                      type="text"
+                      autocomplete="family-name"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field form-field--full">
+                    <label for="inquiry-email">Email <span aria-hidden="true">*</span></label>
+                    <input
+                      id="inquiry-email"
+                      name="Email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-field form-field--full">
+                    <label for="inquiry-message">Message <span aria-hidden="true">*</span></label>
+                    <textarea
+                      id="inquiry-message"
+                      name="Message"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </div>
                 </div>
-                <div class="inquiries-contact">
-                  <p class="inquiries-kicker inquiries-contact-label">PLEASE CONTACT US:</p>
-                  <a class="inquiries-email" href="mailto:redcanarybk@gmail.com">redcanarybk@gmail.com</a>
-                </div>
-              </div>
-              <div class="inquiries-mark inquiries-bird">
-                <img
-                  src="images/branding/Bird-Outline-Yellow-Circle-3.jpg"
-                  alt="The Canary bird mark"
-                  loading="lazy"
-                  decoding="async"
+
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New website inquiry — The Canary"
                 />
-              </div>
+
+                <div class="inquiry-actions">
+                  <button class="button inquiry-submit" type="submit">Send</button>
+                </div>
+
+                <p class="inquiry-form-note">YOUR BOOKING REQUEST IS NOT CONFIRMED UNTIL YOU HEAR BACK FROM THE CANARY.</p>
+
+                <p
+                  class="form-status inquiry-status"
+                  id="inquiry-form-status"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+              </form>
             </div>
           </div>
         </div>
