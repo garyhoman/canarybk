@@ -45,30 +45,46 @@ if (inquiriesForm && inquiriesStatus) {
       return;
     }
 
+    const submitButton = inquiriesForm.querySelector('[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.textContent : "";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending…";
+    }
+
     try {
+      const formData = new FormData(inquiriesForm);
+      const data = Object.fromEntries(formData.entries());
+
       const response = await fetch(inquiriesForm.action, {
         method: "POST",
-        body: new FormData(inquiriesForm),
         headers: {
+          "Content-Type": "application/json",
           Accept: "application/json"
-        }
+        },
+        body: JSON.stringify(data)
       });
 
-      if (response.ok) {
-        inquiriesStatus.classList.add("is-success");
-        inquiriesStatus.textContent =
-          "Thanks — your message has been sent. We'll be in touch soon.";
-        inquiriesForm.reset();
-        return;
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Submission failed");
       }
 
-      inquiriesStatus.classList.add("is-error");
-      inquiriesStatus.innerHTML =
-        'Something went wrong. Please try again or email <a href="mailto:red@thecanarybk.com">red@thecanarybk.com</a>.';
+      inquiriesStatus.classList.add("is-success");
+      inquiriesStatus.textContent =
+        "Thanks — your message has been sent. We'll be in touch soon.";
+      inquiriesForm.reset();
     } catch (error) {
       inquiriesStatus.classList.add("is-error");
       inquiriesStatus.innerHTML =
-        'Something went wrong. Please try again or email <a href="mailto:red@thecanarybk.com">red@thecanarybk.com</a>.';
+        'Something went wrong. Please try again or email <a href="mailto:gazhoman@yahoo.ie">gazhoman@yahoo.ie</a>.';
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
     }
   });
 }
